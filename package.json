@@ -1,0 +1,16 @@
+{
+  "name": "novu-qa-inbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent local email capture and content-contract pilot for Novu issue 11766",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test tests/core.test.js",
+    "test:provider": "node --test tests/provider.test.js",
+    "test:e2e": "playwright test",
+    "check": "npm test && npm run test:provider && npm run test:e2e"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "@novu/providers": "2.6.6", "@playwright/test": "1.61.0" }
+}
